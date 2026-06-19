@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 简明指南与访问说明</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #fafafa;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+      color: #1e1e1e;
+      line-height: 1.7;
+      padding: 2rem 1rem 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .page {
+      max-width: 640px;
+      width: 100%;
+    }
+    /* header / hero */
+    .hero {
+      margin-bottom: 3.5rem;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.6rem;
+      color: #111;
+    }
+    .hero .sub {
+      font-size: 0.95rem;
+      color: #6b6b6b;
+      border-left: 2px solid #ccc;
+      padding-left: 1rem;
+      margin-top: 0.3rem;
+    }
+    /* 通用区块 */
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.2rem;
+      color: #252525;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 2px;
+      background: #d4d4d4;
+      margin-top: 8px;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+      color: #2a2a2a;
+    }
+    a {
+      color: #1d4b7a;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.15s;
+    }
+    a:hover {
+      color: #0a2e4a;
+      text-decoration: underline;
+    }
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      margin-top: 0.5rem;
+    }
+    .feature-list li {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1rem 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02), 0 1px 2px rgba(0,0,0,0.04);
+      border: 1px solid #ececec;
+    }
+    .feature-list li strong {
+      display: block;
+      font-weight: 550;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+      color: #222;
+    }
+    .feature-list li span {
+      color: #4a4a4a;
+      font-size: 0.95rem;
+    }
+    .tip-box {
+      background: #f3f5f7;
+      border-radius: 14px;
+      padding: 1.5rem 1.5rem 1.2rem;
+      border-left: 4px solid #9babb9;
+      margin: 2rem 0;
+    }
+    .tip-box p {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+    .tip-box p:last-child {
+      margin-bottom: 0;
+    }
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-item h3 {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #1a1a1a;
+      margin-bottom: 0.3rem;
+      cursor: default;
+    }
+    .faq-item p {
+      font-size: 0.93rem;
+      color: #4b4b4b;
+      margin-bottom: 0;
+      padding-left: 0.2rem;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e2e2;
+      margin: 2.5rem 0;
+    }
+    .footer-note {
+      font-size: 0.85rem;
+      color: #7e7e7e;
+      text-align: left;
+      border-top: 1px solid #eaeaea;
+      padding-top: 1.8rem;
+      margin-top: 1rem;
+    }
+    /* 响应式 */
+    @media (max-width: 480px) {
+      body {
+        padding: 1.5rem 0.8rem 3rem;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .feature-list li {
+        padding: 0.9rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <h1>爱游戏 · 简明指南</h1>
+    <div class="sub">从浏览到理解，一个克制的方向</div>
+  </div>
+
+  <section>
+    <h2>它是什么</h2>
+    <p>
+      <a href="https://indexhome-aiyouxi.com.cn">爱游戏</a> 是一个以游戏内容为中心的索引式站点，本身并不提供下载或安装包，也不直接托管游戏文件。它更像一扇窗口，帮你梳理不同平台上的游戏信息、版本背景与社区讨论的脉络。如果你正在寻找某个游戏的官方来源、更新日志或者玩家社群入口，这里或许能提供一个不那么嘈杂的起点。
+    </p>
+    <p>
+      整个站点的设计倾向于轻量、直白，没有弹窗和自动播放，也没有会员墙。你看到的就是一个以列表、链接和简短说明构成的页面集合。它适合那些想快速定位游戏资源、但又不想被算法推荐牵着走的玩家。
+    </p>
+  </section>
+
+  <section>
+    <h2>亮点与边界</h2>
+    <ul class="feature-list">
+      <li>
+        <strong>中立索引</strong>
+        <span>不偏向特定平台或发行商，收录范围以维护者个人筛选为准，但会标注来源类型。</span>
+      </li>
+      <li>
+        <strong>低干扰浏览</strong>
+        <span>页面没有浮动广告、自动播放视频或频繁的弹窗提醒，阅读节奏由你自己控制。</span>
+      </li>
+      <li>
+        <strong>信息溯源</strong>
+        <span>每个游戏条目都尽量给出官方或半官方参考链接，方便你进一步核实版本和公告。</span>
+      </li>
+      <li>
+        <strong>克制更新</strong>
+        <span>内容不是实时刷新的 feed 流，而是经过整理和分类的归档式呈现。适合慢慢翻阅，而不是不停刷新。</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>使用建议</h2>
+    <div class="tip-box">
+      <p>🔹 当作参考目录，而不是搜索引擎。如果你已经知道游戏的名字，通过 <a href="https://indexhome-aiyouxi.com.cn">爱游戏</a> 的索引页来查找相关链接，往往比泛搜索更有效率。</p>
+      <p>🔹 留意每个条目下的标注日期与来源性质（官方、社区、档案馆）。同一个游戏在不同时期可能有多条记录，按时间顺序阅读可以了解演变。</p>
+      <p>🔹 站点目前没有内置搜索框，但浏览器自带页面查找（Ctrl+F / Cmd+F）可以快速定位你关心的关键词。</p>
+      <p>🔹 如果你发现链接失效或信息过时，可以尝试通过站点上留下的反馈渠道（如果有）告知维护者。这类个人站点通常依赖用户偶尔的提醒来修复。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>一些说明</h2>
+    <p>
+      爱游戏 并非商业项目，也没有任何形式的付费推广或返利链接。维护者仅凭兴趣整理内容，因此更新节奏和覆盖范围都有限。对于较冷门或刚发布的游戏，索引可能存在滞后，这是正常的。如果你希望看到某个特定作品被收录，可以自行斟酌是否向维护者提议——但请不要期待一定会被采纳。
+    </p>
+    <p>
+      另外，请理解本站不提供任何形式的游戏下载或破解资源。所有外部链接指向的都是公开可见的网站，是否安全、是否符合当地法规，需要你自己判断。在点击任何链接之前，保持基本的网络安全意识总是好的。
+    </p>
+  </section>
+
+  <section>
+    <h2>常见问题（简短摘要）</h2>
+    <div class="faq-item">
+      <h3>页面打不开怎么办？</h3>
+      <p>首先检查你的网络环境，或者稍后再试。个人站点偶尔会有短时不可用的情况。如果持续几天无法访问，那可能站点已经维护或迁移，届时只能关注后续消息。</p>
+    </div>
+    <div class="faq-item">
+      <h3>为什么某些游戏没有收录？</h3>
+      <p>索引范围以维护者的精力与偏好为限，并不是一个完整的游戏数据库。遗漏是常态。</p>
+    </div>
+    <div class="faq-item">
+      <h3>可以转载或分享本站内容吗？</h3>
+      <p>页面上的信息本身来自公开来源，但整理结构和编排方式属于站点维护者。如果你想引用或转载，建议注明出处并保持内容完整。最好不要截取片段进行二次演绎。</p>
+    </div>
+  </section>
+
+  <hr>
+
+  <div class="footer-note">
+    本页仅作为爱游戏的介绍与使用说明。站点本身由个人维护，内容随时间缓慢变化。<br>
+    如果你觉得有用，可以直接收藏 <a href="https://indexhome-aiyouxi.com.cn">爱游戏</a> 以备日后翻阅。
+  </div>
+
+</div>
+</body>
+</html>
