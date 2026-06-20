@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澳门六合彩 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f9fd;
+            color: #13303e;
+            line-height: 1.6;
+            padding: 20px 16px 40px;
+        }
+
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+        }
+
+        /* ---------- hero ---------- */
+        .hero {
+            background: linear-gradient(145deg, #0b2b3a 0%, #1f556a 100%);
+            padding: 50px 28px 42px;
+            border-radius: 32px;
+            text-align: center;
+            color: #e2f0f7;
+            box-shadow: 0 12px 30px rgba(17, 67, 85, 0.25);
+            margin-bottom: 44px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -40%;
+            left: -20%;
+            width: 180%;
+            height: 160%;
+            background: radial-gradient(circle at 30% 50%, rgba(90, 210, 190, 0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 550;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .hero h1 span {
+            display: inline-block;
+            background: #2ac3b0;
+            color: #0b1f28;
+            padding: 0 14px;
+            border-radius: 60px;
+            font-weight: 620;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            font-size: 1.15rem;
+            opacity: 0.92;
+        }
+
+        .hero .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px 20px;
+            margin-top: 28px;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 18px;
+            border-radius: 60px;
+            backdrop-filter: blur(4px);
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .badge-row i {
+            font-style: normal;
+            background: #1f8b7a;
+            padding: 0 10px;
+            border-radius: 40px;
+            color: #d9f2ed;
+        }
+
+        /* ---------- grid cards ---------- */
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 540;
+            color: #0b3546;
+            margin-bottom: 20px;
+            padding-left: 8px;
+            border-left: 6px solid #2ac3b0;
+            padding-left: 16px;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 26px 18px 22px;
+            box-shadow: 0 4px 12px rgba(0, 40, 50, 0.06);
+            transition: transform 0.2s, box-shadow 0.25s;
+            border: 1px solid #dcecf2;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 24px rgba(0, 75, 80, 0.10);
+            border-color: #b3dfd8;
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #0b495c;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card h3::before {
+            content: "◈";
+            color: #19b09c;
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2b5467;
+        }
+
+        /* ---------- 说明区 ---------- */
+        .info-block {
+            background: white;
+            padding: 28px 24px 30px;
+            border-radius: 28px;
+            margin-bottom: 40px;
+            border: 1px solid #d6e9ef;
+            box-shadow: 0 2px 10px rgba(0, 55, 65, 0.04);
+        }
+
+        .info-block p {
+            margin-bottom: 14px;
+        }
+
+        .info-block a {
+            color: #098d7a;
+            font-weight: 520;
+            text-decoration: none;
+            border-bottom: 1px dashed #48c2ae;
+            transition: border-color 0.2s;
+        }
+
+        .info-block a:hover {
+            border-bottom: 2px solid #0fb7a0;
+            color: #046b5b;
+        }
+
+        .highlight-badge {
+            display: inline-block;
+            background: #d5f0ea;
+            padding: 2px 14px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #0b5f50;
+            font-weight: 480;
+        }
+
+        /* ---------- FAQ摘要 ---------- */
+        .faq-summary {
+            background: #e5f3f0;
+            border-radius: 28px;
+            padding: 22px 26px 26px;
+            margin-bottom: 40px;
+            border-left: 8px solid #2ac3b0;
+        }
+
+        .faq-summary h2 {
+            font-size: 1.3rem;
+            font-weight: 540;
+            color: #043d4b;
+            margin-bottom: 12px;
+        }
+
+        .faq-item {
+            margin-bottom: 12px;
+        }
+
+        .faq-item strong {
+            color: #035f50;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .faq-item p {
+            margin-left: 6px;
+            color: #1b4f5e;
+            font-size: 0.95rem;
+        }
+
+        /* ---------- 底部 ---------- */
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0 4px;
+            border-top: 1px solid #c8dee7;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #2f6f7f;
+        }
+
+        .footer-links a {
+            color: #097b68;
+            text-decoration: none;
+            font-weight: 470;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .disclaimer {
+            background: #f0f8fc;
+            border-radius: 20px;
+            padding: 18px 22px;
+            margin-top: 28px;
+            font-size: 0.85rem;
+            color: #2d5b69;
+            border: 1px solid #d1e4eb;
+        }
+
+        .disclaimer strong {
+            color: #075f4e;
+        }
+
+        /* ---------- 响应式 ---------- */
+        @media (max-width: 640px) {
+            body {
+                padding: 12px 8px 32px;
+            }
+
+            .hero {
+                padding: 36px 16px 30px;
+                border-radius: 24px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .grid-cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .card {
+                padding: 18px 12px 16px;
+            }
+
+            .info-block {
+                padding: 22px 16px;
+                border-radius: 22px;
+            }
+
+            .faq-summary {
+                padding: 18px 18px 20px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero .badge-row {
+                flex-direction: column;
+                align-items: center;
+                border-radius: 30px;
+                padding: 12px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero 区 -->
+    <header class="hero">
+        <h1>六合彩 · <span>简明指南</span></h1>
+        <p>无论你是初次接触还是已有经验，这里提供关于澳门六合彩的基本框架、常见规则以及访问时需要注意的细节，帮你快速建立清晰认知。</p>
+        <div class="badge-row">
+            <i>📌 号码组合</i>
+            <i>🕒 开奖节奏</i>
+            <i>🧩 术语说明</i>
+        </div>
+    </header>
+
+    <!-- 优势区：网格卡片 -->
+    <h2 class="section-title">特点与基础认知</h2>
+    <div class="grid-cards">
+        <div class="card">
+            <h3>数字范围</h3>
+            <p>常见玩法基于 1–49 个号码，每次摇出若干枚作为开奖号码，不同玩法对应不同选号规则。</p>
+        </div>
+        <div class="card">
+            <h3>开奖周期</h3>
+            <p>通常每周固定数次开奖，具体日期和时间依当地设定而异，提前确认日程有助于合理安排。</p>
+        </div>
+        <div class="card">
+            <h3>投注方式</h3>
+            <p>可选择单式、复式或胆拖，不同方式影响号码组合数量及对应逻辑，适合不同偏好玩家。</p>
+        </div>
+        <div class="card">
+            <h3>中奖概念</h3>
+            <p>依据所选号码与开奖号码的匹配数量及位置（若有）决定奖级，每个玩法都有独立的中奖条件。</p>
+        </div>
+    </div>
+
+    <!-- 说明区：从简明指南和访问提醒的角度 -->
+    <div class="info-block">
+        <p><span class="highlight-badge">💡 从何开始</span> 了解 <a href="https://webs-macaujc.com">澳门六合彩</a> 的第一步，是熟悉它的基础结构：号码池、开奖数目以及常见的派彩规则。多数平台会提供历史开奖记录和玩法说明，新手可以先从观察和模拟练习入手，不急于投入。</p>
+        <p>由于各地对数字型游戏的规定存在差异，访问前最好确认自己所在地区是否允许参与，并选择正规、有信誉的渠道。很多网站会列出详细条款，花几分钟阅读能避免后续误解。</p>
+        <p>另外，保留投注记录、设置预算上限，是保持良好体验的实用习惯。任何数字游戏都不应影响日常生活节奏，理智参与是长久之道。</p>
+    </div>
+
+    <!-- FAQ 摘要 -->
+    <div class="faq-summary">
+        <h2>❓ 常见疑问摘要</h2>
+        <div class="faq-item">
+            <strong>Q: 如何查询最新开奖号码？</strong>
+            <p>大部分平台会在开奖后立即公布结果，也可关注官方公告或合作站点。信息时效性很重要，建议以主站数据为准。</p>
+        </div>
+        <div class="faq-item">
+            <strong>Q: 新手适合哪种玩法？</strong>
+            <p>可以从最简单的「选号匹配」开始，规则透明、容易理解。待熟悉后再尝试复式或组合玩法，逐步拓宽认知。</p>
+        </div>
+        <div class="faq-item">
+            <strong>Q: 访问网站时需要注意什么？</strong>
+            <p>使用安全网络、确认网址正确，避免通过不明链接进入。同时留意页面是否加密（https），保护个人信息。</p>
+        </div>
+    </div>
+
+    <!-- 底部链接 + 额外提醒 -->
+    <div class="footer-links">
+        <span>澳门六合彩 · 信息参考</span>
+        <span>
+            <a href="https://webs-macaujc.com">澳门六合彩</a> — 基础规则与动态
+        </span>
+    </div>
+
+    <div class="disclaimer">
+        <strong>📘 访问提醒：</strong> 
+        本文内容仅作为知识介绍，不构成任何操作建议。数字游戏存在不确定性，请根据自身情况合理参与。建议每次访问前确认站点安全性与合规性，并遵守所在地法律法规。理性参考，保持客观。
+    </div>
+
+</div>
+</body>
+</html>
