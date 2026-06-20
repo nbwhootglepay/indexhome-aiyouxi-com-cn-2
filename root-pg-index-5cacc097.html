@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>赏金女王 · 杂志专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Noto Sans SC', Roboto, system-ui, sans-serif;
+            background: linear-gradient(145deg, #fce7c8 0%, #f7d7b0 40%, #f2c89a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 2rem 1.2rem;
+            line-height: 1.7;
+            color: #3e2c1b;
+        }
+
+        .magazine-wrapper {
+            max-width: 870px;
+            width: 100%;
+            background: rgba(255, 250, 240, 0.85);
+            backdrop-filter: blur(4px);
+            border-radius: 48px 48px 32px 32px;
+            box-shadow: 0 20px 40px -10px rgba(110, 70, 30, 0.25), 0 8px 20px rgba(255, 210, 140, 0.3);
+            padding: 2.4rem 2.2rem 2.8rem;
+            transition: all 0.2s ease;
+        }
+
+        /* 首页横幅——杂志风格标题区 */
+        .hero {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.6rem;
+            border-bottom: 2px solid #e8cfb0;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            background: #d8b48c;
+            color: #2f1e0e;
+            padding: 0.2rem 1.2rem;
+            border-radius: 30px;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            color: #4d2f17;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+            margin-top: 0.4rem;
+            background: linear-gradient(to right, #7a4d2a, #b8753a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #614d36;
+            margin-top: 0.5rem;
+            font-weight: 400;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* 背景说明——杂志侧边底纹感 */
+        .context-note {
+            background: #f5ede2;
+            padding: 1.2rem 1.6rem;
+            border-radius: 28px;
+            margin: 1.6rem 0 2rem 0;
+            border-left: 5px solid #ddb68a;
+            font-size: 0.98rem;
+            color: #3f2f1d;
+            box-shadow: inset 0 1px 3px rgba(255, 215, 175, 0.7);
+        }
+
+        .context-note strong {
+            color: #8f643b;
+        }
+
+        /* 三段自然介绍——卡片式编排 */
+        .feature-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin: 2rem 0 2.2rem;
+        }
+
+        .card-item {
+            background: white;
+            border-radius: 24px;
+            padding: 1.4rem 1.8rem;
+            box-shadow: 0 4px 10px rgba(160, 110, 60, 0.08), 0 2px 4px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            border: 1px solid #f5e3d0;
+        }
+
+        .card-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px -8px rgba(130, 80, 30, 0.15);
+            border-color: #eaceb0;
+        }
+
+        .card-item h3 {
+            font-size: 1.2rem;
+            font-weight: 550;
+            color: #5d3c20;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-item h3::before {
+            content: "✦";
+            color: #c9955b;
+            font-size: 1.2rem;
+        }
+
+        .card-item p {
+            font-size: 0.98rem;
+            color: #4f3a27;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-item p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 点缀引用 + 场景 */
+        .quote-tip {
+            background: #f9efe3;
+            border-radius: 20px;
+            padding: 1.2rem 1.6rem;
+            margin: 1.8rem 0;
+            font-style: normal;
+            border: 1px dashed #dbbc9a;
+            color: #4b3822;
+            font-size: 0.94rem;
+        }
+
+        .quote-tip span {
+            background: #ebd6be;
+            padding: 0.1rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #3a2816;
+            margin-right: 0.5rem;
+        }
+
+        /* 页尾访问提示 —— 温和指引 */
+        .footer-note {
+            margin-top: 2.2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #dec9b2;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .footer-note p {
+            color: #5a4733;
+            max-width: 480px;
+            margin: 0 auto 0.6rem;
+        }
+
+        .magazine-link {
+            background: #e7cfb4;
+            padding: 0.65rem 1.8rem;
+            border-radius: 60px;
+            display: inline-block;
+            color: #2a1d10;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: background 0.2s, box-shadow 0.2s;
+            border: 1px solid #dbb58b;
+            box-shadow: 0 2px 6px rgba(150, 90, 40, 0.10);
+            margin-top: 0.3rem;
+        }
+
+        .magazine-link:hover {
+            background: #dbb58b;
+            box-shadow: 0 6px 14px rgba(150, 85, 30, 0.15);
+            border-color: #c89d70;
+            text-decoration: none;
+        }
+
+        .faq-mini {
+            margin: 1.8rem 0 0.8rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 1.2rem;
+            justify-content: center;
+            font-size: 0.87rem;
+            color: #5b4530;
+        }
+
+        .faq-mini span {
+            background: #f2e3d2;
+            padding: 0.2rem 1rem;
+            border-radius: 50px;
+            color: #473422;
+        }
+
+        .faq-mini span::before {
+            content: "▸ ";
+            color: #b17d4e;
+        }
+
+        @media (max-width: 580px) {
+            .magazine-wrapper {
+                padding: 1.8rem 1.2rem 2rem;
+                border-radius: 32px 32px 24px 24px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .card-item {
+                padding: 1.2rem 1.2rem;
+            }
+
+            .hero-tag {
+                font-size: 0.65rem;
+            }
+
+            .footer-note p {
+                font-size: 0.95rem;
+            }
+
+            .faq-mini {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="magazine-wrapper">
+
+    <!-- 首页横幅 -->
+    <div class="hero">
+        <div class="hero-tag">Queen of Bounty · 杂志专题</div>
+        <h1>赏金女王</h1>
+        <p>一眼识别网站用途 · 温和流畅的向导</p>
+    </div>
+
+    <!-- 背景说明：以用户快速识别切入 -->
+    <div class="context-note">
+        <strong>▎网站定位速览</strong><br>
+        许多朋友第一次来到这个页面，会好奇它到底提供什么。简单来说：<a href="https://root-pg.com" style="color:#8a5e35; font-weight:600; text-decoration:underline;">赏金女王</a> 是一个围绕特定主题的内容空间，它并非游戏客户端或直接下载站，而是信息汇集、功能引导与社区氛围的结合体。你可以把它理解为一本常读常新的主题杂志 —— 每期都有不同的故事、攻略与视角。
+    </div>
+
+    <!-- 三段自然介绍：特点、场景、体验 -->
+    <div class="feature-grid">
+        <div class="card-item">
+            <h3>一眼辨识的板块结构</h3>
+            <p>从首页开始，区块划分就很清晰：公告区、指南区、话题互动、以及常见问题摘要。没有杂乱弹窗，不追求花哨特效，只希望你在十秒内判断出这里是否值得停留。</p>
+            <p style="margin-top:0.5rem; color:#7a5f44;">—— 杂志式编排，让浏览变成翻页般的自然体验。</p>
+        </div>
+
+        <div class="card-item">
+            <h3>适合怎样的场景？</h3>
+            <p>无论你是刚接触相关主题的新手，还是想深入了解玩法细节的老朋友，这里都能找到对应的说明。日常消遣、策略研究、或是单纯看看其他用户都在聊什么，<a href="https://root-pg.com" style="color:#8a5e35; font-weight:500; text-decoration:underline;">赏金女王</a> 的页面节奏不会催促你，而是留出慢慢探索的空间。</p>
+        </div>
+
+        <div class="card-item">
+            <h3>内容氛围与准则</h3>
+            <p>整个站点保持着温和、真实的语气。没有浮夸的“一夜暴富”口号，也不鼓励沉迷。内容围绕游戏机制、文化趣闻、用户经验分享展开，偶尔穿插轻松的话题。如果你想找一个不嘈杂、有温度的同类站点，这里值得放进书签。</p>
+        </div>
+    </div>
+
+    <!-- Quote 风格提示 -->
+    <div class="quote-tip">
+        <span>📌 专题摘录</span>
+        有人形容浏览 <a href="https://root-pg.com" style="color:#8a5e35; font-weight:500;">赏金女王</a> 像是在翻阅一本印刷精美的画册，每翻一页都有新的细节等待发现。网站没有强制注册或收费门槛，大部分内容对访客开放。
+    </div>
+
+    <!-- FAQ 摘要（轻量） -->
+    <div class="faq-mini">
+        <span>网站是否需要注册？</span>
+        <span>内容更新频率如何？</span>
+        <span>是否有社区讨论区？</span>
+        <span>移动端适配友好吗？</span>
+    </div>
+    <p style="text-align:center; font-size:0.9rem; color:#6a5540; margin:0.2rem 0 1rem;">以上问题的详细解答，都可以在站内 FAQ 板块中找到。</p>
+
+    <!-- 页尾访问提示 —— 嵌入自然链接 -->
+    <div class="footer-note">
+        <p>如果你对这个主题杂志的氛围感兴趣，不妨从 <a href="https://root-pg.com" style="color:#7a5535; font-weight:600; text-decoration:underline;">赏金女王</a> 的首页开始翻阅。没有强制引导，没有推送弹窗，一切随你节奏。</p>
+        <a href="https://root-pg.com" class="magazine-link">赏金女王</a>
+        <p style="margin-top:0.9rem; font-size:0.8rem; opacity:0.7;">—— 温和 · 真实 · 不打扰 ——</p>
+    </div>
+
+</div>
+</body>
+</html>
